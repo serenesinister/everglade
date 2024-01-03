@@ -1,24 +1,24 @@
-body{
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-ul{
+ul {
     padding: 0px!important;
 }
-.menu-principal{
+.menu-principal {
     width: 100%;
     margin:0%;
     background-color: rgb(39, 66, 141);
     height: 60px;
 }
-main{
+main {
     margin: 0 auto;
     width: 980px;
     position: relative;
 }
-.logo{
+.logo {
     float: left;
     padding: 0px;
     width: 60%;
@@ -36,43 +36,43 @@ main{
     float: left;
     list-style: none;
 }
-.redes-sociais{
+.redes-sociais {
     width: 17%;
     float: right;
 }
-.header2{
+.header2 {
     background-color: white;
     width: 980px;
     margin: 0 auto;
     /*padding: 15px;*/
 }
-.menu-urls{
+.menu-urls {
     height: 56px;
     border-bottom: 3px solid #efefefef;
 }
-.menu ul li{
+.menu ul li {
     display: inline-block;
     color: #8b8b8b;
     margin-left: 15px;
     height: 40px;
 }
-.menu ul li:hover{
+.menu ul li:hover {
     border-bottom: 3px solid #1f63a1;
 }
-.menu ul li a:hover{
+.menu ul li a:hover {
     color:  #1f63a1;
 }
-.menu ul li a{
+.menu ul li a {
     color: #8b8b8b;
     text-decoration: none;
     font-size: 20px;
     text-transform: uppercase;
 }
-.menu{
+.menu {
     width: 62%;
     float:left;
 }
-.busca input{
+.busca input {
     background-image: url('../img/pesquisa.png');
     background-repeat: no-repeat;
     background-size: 14px;
@@ -82,24 +82,167 @@ main{
     height: 20px;
     float: right;
     border: 1px solid #dbdbdb;
+    border-radius: 10px;
 }
-.total{
+.busca input::placeholder {
+    color: rgb(202, 202, 202); /* Substitua "your_color" pelo código de cor desejado */
+}
+.total {
     width: 100%;
     float: left;
     position: relative;
 }
 .slider {
+    position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 980px;
+    max-width: 1370px;
     margin: 0 auto;
 }
 .slide {
-    float: left;
-    width: 100%;
-    display: none;
+   flex: 0 0 100%;
 }
 .slide img {
     width: 100%;
     height: auto;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+.dots {
+    text-align: center;
+    margin-top: 100px;
+    position: absolute;
+    bottom: 10px; /* Ajuste a distância da parte inferior conforme necessário */
+    width: 100%;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #1f63a1;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    right: 70%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+}
+.prev img,
+.next img {
+    width: 30px;
+    height: 30px;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+.prev span,
+.next span {
+    display: none;
+}
+.texto-destaque {
+    color: rgb(151, 151, 151);
+    margin-top: 30px;
+    text-align: center;
+    /*border-bottom: 3px solid #efefefef;*/
+}
+.texto-destaque h1{
+    text-transform: uppercase;
+}
+.texto-destaque h2 {
+    color: rgb(180, 180, 180);
+}
+.texto-destaque p {
+    color: rgb(190, 190, 190);
+}
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.info {
+    width: 100%;
+    text-align: center;
+}
+.total-3 {
+    width: 15%;
+    margin: 15px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.imagensblackend {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    width: 100%;
+    height: 100%;
+    margin:1%;
+    background-color: #dedede;
+}
+.imagensblackend ul {
+    list-style: none;
+    padding: 0;
+    margin: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imagensblackend li {
+    text-align: center;
+    margin: 10px;
+}
+.imagensblackend img {
+    width: 230px;
+    height: 230px;
+    margin-bottom: 10px;
+}
+.imagensblackend li {
+    text-align: center;
+    margin: 10px; /* espaçamento entre cada imagem e legenda */
+}
+.imagensblackend a {
+    text-decoration: none; /* remove sublinhado dos links */
+    font-size: 13px;
+}
+.imagensblackend p {
+    margin: 0;
+    color: #808080;
+}
+.imagensblackend::before {
+    margin-top: 0px;
+    width: 100%;
+    height: 33px;
+    display: inline-block;
+    content: '';
+    background: white;
+    background-image: url(../img/triangulo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
 }
