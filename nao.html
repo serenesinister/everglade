@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Erick Gravações</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./img/multicolor-e-logotipo-play-brand-letter.png" sizes="32x32" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <audio id="audioPlayer" autoplay preload="auto">
+        <source src="./img/SwampBluesSlideSouthernSwamp.mp3" type="audio/mp3">
+    </audio>    
+    <script>
+        $(window).on('load', function () {
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.addEventListener('loadedmetadata', function() {
+                audioPlayer.play();
+            });
+            document.body.addEventListener('click', function() {
+                audioPlayer.play();
+            });
+            audioPlayer.play();
+        });
+    </script>
+</head>
+<body>
+    <header class="menu-principal">
+        <main>
+            <div class="header1">
+                <div class="logo">
+                    <img alt="logo" title="Erick Gravações" src="./img/Erick.png"/>
+                </div>
+                <div class="redes-sociais" style="cursor: pointer;">
+                    <ul>
+                        <li><a><img src="./img/instagram.png" width="31" height="31"></a></li>
+                        <li><a><img src="./img/facebook.png"  width="33" height="33"></a></li>
+                        <li><a><img src="./img/suamusica.png"  width="35" height="30"></a></li>
+                        <li><a><img src="./img/youtube.png"  width="35" height="33"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="total menu-urls">
+        <div class="header2">
+            <div class="menu" style="cursor: pointer;">
+                <ul>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                    <li><a>Voltar</a></li>
+                </ul>
+            </div>            
+            <div class="busca"> 
+                <input placeholder="Search..." type="text">
+            </div>
+        </div>
+    </main>
+    <div class="total">
+        <div class="content texto-destaque" style="background-image: url('./img/EvergladesZkBPYJ.jpg'); background-size: cover; height: 100vh; display: flex; align-items: center; justify-content: center; margin-top: 0px;">
+            <div class="info" style="font-size: 2.5em; color: #FFFFFF; text-align: center; text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);">
+                <h1><strong>Volte para os Everglades!</strong></h1>
+            </div>
+        </div>        
+    <footer class="footer-container">
+            <p style="color: grey; cursor: pointer;"><em>desenvolvido por Nosremew</em></p>           
+        </footer>           
+    </div>
+</body>
+</html>

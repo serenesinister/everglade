@@ -8,13 +8,24 @@
     <link rel="icon" href="./img/multicolor-e-logotipo-play-brand-letter.png" sizes="32x32" type="image/png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="js/script.js"></script>
+    <style>
+        .total-3 img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .total-3 img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header class="menu-principal">
         <main>
             <div class="header1">
                 <div class="logo">
-                    <img src="./img/Erick.png"/>
+                    <img alt="logo" title="Erick Gravações" src="./img/Erick.png"/>
                 </div>
                 <div class="redes-sociais">
                     <ul>
@@ -37,6 +48,7 @@
                     <li><a href="paginas.html">Páginas</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><a href="nao.html">Não Clique!</a></li>
                 </ul>
             </div>            
             <div class="busca"> 
@@ -50,7 +62,7 @@
         <div class="content texto-destaque">
             <div class="info-container">
                 <div class="info">
-                    <h1> <strong>Blog &reg</strong></h1>
+                    <h1> <strong>Blog</strong></h1>
                     <p>Leia as últimas postagens do nosso blog.</p>
                 </div>
                 <div class="total-3">
@@ -63,12 +75,13 @@
                     <h3>Postagem 2</h3>
                     <p>Um breve resumo da segunda postagem do blog.</p>
                 </div>
-                <div class="total-3" style="margin-top: 70px;">
+                <div class="total-3">
                     <img src="./img/postagem3.png"/>
                     <h3>Postagem 3</h3>
                     <p>Descrição da terceira postagem no blog.</p>
                 </div>
-            <!-- continua -->
+                <!-- continua -->
+            </div>
         
         <footer class="footer-container">
             <div class="final">
@@ -88,7 +101,10 @@
                 <p>Phasellus auctor odio vitae risus posuere facilisis. Fusce dapibus lacus ut magna imperdiet, vel ultricies dolor tincidunt. Suspendisse potenti.</p>
             </div>
             <div class="baseboard"></div>
-        </footer>            
+        </footer>           
+        <div class="creditos">
+            <p style="cursor: pointer;"><em>desenvolvido por Nosremew</em></p>
+        </div>  
     </div>
 </body>
 </html>

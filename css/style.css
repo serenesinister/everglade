@@ -29,6 +29,11 @@ main {
     margin-left: 30px;
     margin-top: 5px;
     padding: 0%;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.logo img:hover {
+    transform: scale(1.1);
 }
 .redes-sociais ul li {
     margin-left: 5px;
@@ -39,6 +44,11 @@ main {
 .redes-sociais {
     width: 17%;
     float: right;
+    transition: width 2s; height: 2s;
+}
+.redes-sociais :hover {
+    margin-left: 1px;
+    margin-right: 1px;
 }
 .header2 {
     background-color: white;
@@ -69,7 +79,7 @@ main {
     text-transform: uppercase;
 }
 .menu {
-    width: 62%;
+    width: 80%;
     float:left;
 }
 .busca input {
@@ -115,7 +125,7 @@ main {
     text-align: center;
     margin-top: 100px;
     position: absolute;
-    bottom: 10px; /* Ajuste a distância da parte inferior conforme necessário */
+    bottom: 10px;
     width: 100%;
 }
 .dot {
@@ -228,6 +238,10 @@ main {
     width: 230px;
     height: 230px;
     margin-bottom: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.imagensblackend img:hover {
+    transform: scale(1.1);
 }
 .imagensblackend li {
     text-align: center;
@@ -285,14 +299,19 @@ main {
 .final p {
     text-align: left;
 }
-
 .baseboard {
     background-color: rgb(54, 54, 54);;
     position: absolute;
     width: 100%;
-    height: 250px;
+    height: 300px;
     z-index: -1;
 }
 html {
     scroll-behavior: smooth;
+}
+.creditos p {
+    transition: transform 0.5s ease-in-out;
+}
+.creditos p:hover {
+    transform: scale(1.1);
 }

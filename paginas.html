@@ -8,13 +8,24 @@
     <link rel="icon" href="./img/multicolor-e-logotipo-play-brand-letter.png" sizes="32x32" type="image/png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="js/script.js"></script>
+    <style>
+        .total-3 img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .total-3 img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header class="menu-principal">
         <main>
             <div class="header1">
                 <div class="logo">
-                    <img src="./img/Erick.png"/>
+                    <img alt="logo" title="Erick Gravações" src="./img/Erick.png"/>
                 </div>
                 <div class="redes-sociais">
                     <ul>
@@ -37,6 +48,7 @@
                     <li><a href="paginas.html">Páginas</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><a href="nao.html">Não Clique!</a></li>
                 </ul>
             </div>            
             <div class="busca"> 
@@ -50,21 +62,21 @@
         <div class="content texto-destaque">
             <div class="info-container">
                 <div class="info">
-                    <h1> <strong>Outras Páginas &reg</strong></h1>
+                    <h1> <strong>Outras Páginas</strong></h1>
                     <p>Explore outras páginas interessantes do nosso site.</p>
                 </div>
-                <div class="total-3">
-                    <img src="./img/pagina1.png"/>
+                <div class="total-3" style="margin-top: 70px;">
+                    <img src="./img/rd5p9vhy1qr91yokel.jpg" width="50"/>
                     <h3>Página 1</h3>
                     <p>Descrição da primeira página e seu conteúdo.</p>
                 </div>
-                <div class="total-3" style="margin-top: 70px;">
-                    <img src="./img/pagina2.png"/>
+                <div class="total-3">
+                    <img src="./img/rd5p9vhy1qr91yokel.jpg" width="50"/>
                     <h3>Página 2</h3>
                     <p>Conteúdo informativo sobre a segunda página.</p>
                 </div>
                 <div class="total-3" style="margin-top: 70px;">
-                    <img src="./img/pagina3.png"/>
+                    <img src="./img/rd5p9vhy1qr91yokel.jpg" width="50"/>
                     <h3>Página 3</h3>
                     <p>Detalhes e informações sobre a terceira página.</p>
                 </div>
@@ -89,7 +101,10 @@
                 <p>Phasellus auctor odio vitae risus posuere facilisis. Fusce dapibus lacus ut magna imperdiet, vel ultricies dolor tincidunt. Suspendisse potenti.</p>
             </div>
             <div class="baseboard"></div>
-        </footer>            
+        </footer>  
+        <div class="creditos">
+            <p style="cursor: pointer;"><em>desenvolvido por Nosremew</em></p>
+        </div>           
     </div>
 </body>
 </html>
