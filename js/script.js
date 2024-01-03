@@ -67,3 +67,13 @@ $(document).ready(function () {
         }
     );
 });
+    function loadSection(sectionName) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("content-container").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", sectionName + ".html", true);
+        xhttp.send();
+    }

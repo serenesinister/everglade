@@ -85,7 +85,7 @@ main {
     border-radius: 10px;
 }
 .busca input::placeholder {
-    color: rgb(202, 202, 202); /* Substitua "your_color" pelo código de cor desejado */
+    color: rgb(202, 202, 202);
 }
 .total {
     width: 100%;
@@ -188,6 +188,13 @@ main {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 14px;
+    -webkit-transition: width 2s; height: 2s;
+    transition: width 2s; height: 2s;
+}
+.total-3 :hover {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
 .content {
     display: flex;
@@ -245,4 +252,47 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px;
+}
+.final-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.final-logo img {
+    cursor: pointer;
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    -webkit-transition: width 2s; height: 2s;
+    transition: width 2s; height: 2s;
+}
+.final-logo :hover {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+.final {
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+    margin: 0 20px;
+    margin-bottom: 50px;
+}
+.final p {
+    text-align: left;
+}
+
+.baseboard {
+    background-color: rgb(54, 54, 54);;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+}
+html {
+    scroll-behavior: smooth;
 }
