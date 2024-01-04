@@ -1,1 +1,1 @@
-link: everglade.netlify.app
+link: https://everglade.netlify.app
