@@ -1,79 +1,76 @@
-$(document).ready(function () {
-    var currentIndex = 0;
-    var slides = $('.slide');
-    var totalSlides = slides.length;
-    var slideWidth = 100;
-    var slideInterval;
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const totalSlides = slides.length;
+    const slideWidth = 100;
+    let slideInterval;
 
-    function showSlide(index) {
-        var slideWidth = $('.slide').width();
-        var translateValue = -index * slideWidth + 'px';
-    
-        // Mova os slides horizontalmente
-        $('.slides').css('transform', 'translateX(' + translateValue + ')');
-    
-        // Atualize os pontos indicadores
+    const showSlide = index => {
+        const translateValue = -index * slideWidth;
+        document.querySelector('.slides').style.transform = `translateX(${translateValue}%)`;
         updateDots(index);
-    }
+    };
 
-    function nextSlide() {
+    const nextSlide = () => {
         currentIndex = (currentIndex + 1) % totalSlides;
         showSlide(currentIndex);
-    }
+        restartInterval();
+    };
 
-    function prevSlide() {
+    const prevSlide = () => {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         showSlide(currentIndex);
-    }
+        restartInterval();
+    };
 
-    function createDots() {
-        var dotsContainer = $('.dots');
-        for (var i = 0; i < totalSlides; i++) {
-            dotsContainer.append('<span class="dot"></span>');
-        }
+    const createDots = () => {
+        const dotsContainer = document.querySelector('.dots');
+        dotsContainer.innerHTML = Array.from({ length: totalSlides }, (_, index) => `<span class="dot" data-index="${index}"></span>`).join('');
         updateDots(currentIndex);
-    }
+    };
 
-    function updateDots(index) {
-        $('.dot').removeClass('active');
-        $('.dot').eq(index).addClass('active');
-    }
+    const updateDots = index => {
+        document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+        document.querySelector(`.dot[data-index="${index}"]`).classList.add('active');
+    };
 
-    // Inicialização
+    const restartInterval = () => {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 3000);
+    };
+
     createDots();
     showSlide(currentIndex);
 
-    // Adiciona eventos para os botões de próximo e anterior
-    $('.slider').append('<button class="prev">Prev</button><button class="next">Next</button>');
-    $('.next').click(nextSlide);
-    $('.prev').click(prevSlide);
+    const slider = document.querySelector('.slider');
+    slider.innerHTML += '<button class="prev">Prev</button><button class="next">Next</button>';
 
-    // Adiciona evento para os dots
-    $('.dot').click(function () {
-        var dotIndex = $(this).index();
-        showSlide(dotIndex);
+    slider.addEventListener('click', event => {
+        if (event.target.classList.contains('next')) {
+            nextSlide();
+        } else if (event.target.classList.contains('prev')) {
+            prevSlide();
+        } else if (event.target.classList.contains('dot')) {
+            const dotIndex = parseInt(event.target.dataset.index, 10);
+            showSlide(dotIndex);
+            restartInterval();
+        }
     });
 
-    // Configura carrossel automático a cada 3 segundos (3000 milissegundos)
-    slideInterval = setInterval(nextSlide, 3000);
+    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slider.addEventListener('mouseleave', restartInterval);
 
-    // Pára o carrossel quando o mouse passa sobre o slider
-    $('.slider').hover(
-        function () {
-            clearInterval(slideInterval);
-        },
-        function () {
-            slideInterval = setInterval(nextSlide, 3000);
-        }
-    );
+    // Inicializa o carrossel automático
+    slideInterval = setInterval(nextSlide, 3000);
 });
-    function loadSection(sectionName) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("content-container").innerHTML = this.responseText;
-            }
-        };
-        xhttp.open("GET", sectionName + ".html", true);
-        xhttp.send();
-    }
+
+const loadSection = sectionName => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("content-container").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", `${sectionName}.html`, true);
+    xhttp.send();
+};
