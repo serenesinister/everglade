@@ -1,1 +1,1 @@
-link: https://everglade.netlify.app
+link: https://fairyeverglade.netlify.app
